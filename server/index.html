@@ -4,18 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bid Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      height: 50px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, button {
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .error-message {
+      color: red;
+      margin-top: 10px;
+    }
+    .dashboard {
+      margin-top: 20px;
+    }
+    .winning-bid, .bid-details, .no-bids {
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #e9ecef;
+      border-radius: 5px;
+    }
+    .no-bids {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <form id="bid-form" action="/submitBid" method="POST">
-    <input type="number" id="bidAmount" name="bidAmount" placeholder="Bid Amount" required>
-    <input type="text" id="bidderName" name="bidderName" placeholder="Bidder Name" required>
-    <button type="submit">Submit Bid</button>
-    <div class="error-message"></div>
-  </form>
-  <div class="dashboard">
-    <div class="winning-bid"></div>
-    <div class="bid-details"></div>
-    <div class="no-bids">No bids submitted</div>
+  <header>
+    <img src="https://via.placeholder.com/150x50?text=StackAdapt+Logo" alt="StackAdapt Logo">
+    <h1>Bid Dashboard</h1>
+  </header>
+  <div class="container">
+    <form id="bid-form" action="/submitBid" method="POST">
+      <input type="number" id="bidAmount" name="bidAmount" placeholder="Bid Amount" required>
+      <input type="text" id="bidderName" name="bidderName" placeholder="Bidder Name" required>
+      <button type="submit">Submit Bid</button>
+      <div class="error-message"></div>
+    </form>
+    <div class="dashboard">
+      <div class="winning-bid"></div>
+      <div class="bid-details"></div>
+      <div class="no-bids">No bids submitted</div>
+    </div>
   </div>
 </body>
 </html>
+
