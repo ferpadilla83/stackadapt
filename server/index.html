@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bid Dashboard</title>
+</head>
+<body>
+  <form id="bid-form" action="/submitBid" method="POST">
+    <input type="number" id="bidAmount" name="bidAmount" placeholder="Bid Amount" required>
+    <input type="text" id="bidderName" name="bidderName" placeholder="Bidder Name" required>
+    <button type="submit">Submit Bid</button>
+    <div class="error-message"></div>
+  </form>
+  <div class="dashboard">
+    <div class="winning-bid"></div>
+    <div class="bid-details"></div>
+    <div class="no-bids">No bids submitted</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "dependencies": {
+    "chai": "^5.1.1",
+    "express": "^4.19.2",
+    "mocha": "^10.5.2",
+    "playwright": "^1.45.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "@types/node": "^20.14.9"
+  },
+  "scripts": {
+    "test": "mocha tests/**/*.spec.js"
+  }
+}
