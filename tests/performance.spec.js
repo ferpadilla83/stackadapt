@@ -1,7 +1,5 @@
-
-
 describe('Bid Submission Performance', () => {
-  it('should submit a bid within the performance criteria', async () => {
+  it('should submit a bid within the performance criteria', async ({page}) => {
     await page.goto('http://localhost:3000');
 
     const startTime = Date.now();

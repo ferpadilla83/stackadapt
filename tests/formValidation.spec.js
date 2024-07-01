@@ -1,7 +1,5 @@
-
-
 describe('Form Validation', () => {
-  it('should show an error message for missing fields', async () => {
+  it('should show an error message for missing fields', async ({page}) => {
     await page.goto('http://localhost:3000');
     await page.click('button[type="submit"]');
     const errorMessage = await page.textContent('.error-message');

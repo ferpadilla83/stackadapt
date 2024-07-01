@@ -1,7 +1,5 @@
-
-
 describe('Edge Cases', () => {
-  it('should handle simultaneous bid submissions', async () => {
+  it('should handle simultaneous bid submissions', async ({page}) => {
     const page1 = await context.newPage();
     const page2 = await context.newPage();
 

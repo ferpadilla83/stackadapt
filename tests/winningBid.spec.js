@@ -1,7 +1,6 @@
 
-
 describe('Winning Bid Display', () => {
-  it('should correctly identify and display the highest bid', async () => {
+  it('should correctly identify and display the highest bid', async ({page}) => {
     await page.goto('http://localhost:3000');
 
     // Submit first bid
