@@ -1,0 +1,20 @@
+pipeline {
+  agent any
+  stages {
+    stage('Install all Dependencies') {
+      steps {
+        sh 'npm install'
+      }
+    }
+    stage('Run Tests') {
+      steps {
+        sh 'npx playwright test'
+      }
+    }
+  }
+  post {
+    always {
+      junit 'playwright-report/*.xml'
+    }
+  }
+}
